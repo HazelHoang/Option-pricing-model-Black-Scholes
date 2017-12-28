@@ -1,4 +1,4 @@
-# Option-pricing-model-Black-Scholes
+# Option-pricing-model-Black-Scholes- Assuming stock pays no dividend.
 Call, Put, European style options
 from math import *
 from scipy.stats import norm
@@ -14,3 +14,6 @@ def d2(S,X,T,r,sigma):
 def bs_call(S,X,T,r,sigma):
      return S*norm.cdf(d1(S,X,T,r,sigma))-X*exp(-r*T)*norm.cdf(d2(S,X,T,r,sigma))
     
+#define the put option price function
+def bs_put(S,X,T,r,sigma)"
+    return X*exp(-r*T)*norm.cdf(-d2(S,X,T,r,sigma)) - S*norm.cdf(-d1(S,X,T,r,sigma))
